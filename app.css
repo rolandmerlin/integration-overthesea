@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: Haettenschweiler, sans-serif;
+    font-weight: 100;
+}
+body {
+    width:100vw;
+    height:100vh;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 4fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width:100%;
+    max-width:120vh;
+    margin:0 auto;
+    height:100%;
+    border:2px solid black;
+    background-color:#EAE9E3;
+}
+    
+.div1 {
+    grid-area: 1 / 1 / 2 / 6;
+    position:relative;
+    border-bottom:2px solid black;
+    font-weight: bold;
+}
+.div1 span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    font-size:24px;
+    letter-spacing:3px;
+}
+.div2 {
+    grid-area: 2 / 1 / 5 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-right:2px solid black;
+}
+.div2 img {
+    height:80%;
+}
+.div3 {
+    grid-area: 2 / 5 / 3 / 6;
+    border-left:2px solid black;
+}
+.div4 {
+    grid-area: 3 / 5 / 4 / 6;
+    overflow:visible;
+    position:relative;    
+}
+.div5 {
+    border-left:2px solid black;
+    grid-area: 4 / 5 / 5 / 6;
+    position:relative;
+}
+.div5>* {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);    
+}
+.div5>b {
+    position: absolute;
+    display:inline-block;
+    background-image:url(./assets/trait-site-ben.svg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    top:47%;
+    width:95%;
+    height:100px;
+}
+.div6 {
+    border-top:2px solid black;
+    border-left:2px solid black;
+    grid-area: 5 / 5 / 6 / 6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.div7 {
+    grid-area: 5 / 1 / 6 / 5;
+    border-top:2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div7 ul {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:80%;
+    margin:0 auto;
+}
+.div7 ul li {
+    list-style: none;
+    text-align: center;
+}
+.div7 ul li a {
+    text-decoration:none;
+    color:black;
+    font-weight: bold;
+}
+.div8 {
+    grid-area: 2 / 2 / 5 / 5;
+    background-color: #00f;
+    background-image: url(./assets/love-dress-white-04.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hanbuger {
+    position:absolute;
+    display: inline-block;
+    top:50%;  
+    left:calc(100% - 70px);      
+    height:15px;
+    width:40px;
+    transform: translateY(-50%);
+}
+#hanbuger:before {
+    position: absolute;
+    display: inline-block;
+    content:'';
+    width:40px;
+    top:0;
+    border-top:2px solid black
+}
+#hanbuger:after {
+    position:absolute;
+    display: inline-block;
+    left:0px;
+    top:15px;
+    content:'';
+    width: 40px;
+    border-top:2px solid black    
+}
+.minbg {
+    position:absolute;
+    right:0;
+    top:0;
+    width:140%;
+    height:100%;
+    background-image: url(./assets/love-dress-white-02.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    border:2px solid black;
+}
+.icono-arrow1::after, .icono-arrow1::before {
+    content: "";
+    box-sizing: border-box;    
+}
+.icono-arrow1::before {
+      right: 0;
+      top: -3px;
+      position: absolute;
+      height: 4px;
+      box-shadow: inset 0 0 0 32px;
+      transform: rotate(-45deg);
+      width: 45px;
+      transform-origin: right top;    
+}
+.icono-arrow1 {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #666;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-width: 4px 4px 0 0;
+    border-style: solid;
+    margin: 10px;
+    transform: rotate(45deg);
+}
+.tac {
+    text-align:center;
+    text-decoration: none;
+}
